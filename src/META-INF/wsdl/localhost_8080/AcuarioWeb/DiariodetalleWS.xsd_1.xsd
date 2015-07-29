@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="countDiariodetalle" type="tns:countDiariodetalle"/>
+
+<xs:element name="countDiariodetalleResponse" type="tns:countDiariodetalleResponse"/>
+
+<xs:element name="createDiariodetalle" type="tns:createDiariodetalle"/>
+
+<xs:element name="createDiariodetalleResponse" type="tns:createDiariodetalleResponse"/>
+
+<xs:element name="createIdDiariodetalle" type="tns:createIdDiariodetalle"/>
+
+<xs:element name="createIdDiariodetalleResponse" type="tns:createIdDiariodetalleResponse"/>
+
+<xs:element name="cuentacontable" type="tns:cuentacontable"/>
+
+<xs:element name="diario" type="tns:diario"/>
+
+<xs:element name="diariodetalle" type="tns:diariodetalle"/>
+
+<xs:element name="editDiariodetalle" type="tns:editDiariodetalle"/>
+
+<xs:element name="editDiariodetalleResponse" type="tns:editDiariodetalleResponse"/>
+
+<xs:element name="empresa" type="tns:empresa"/>
+
+<xs:element name="findAllDiariodetalle" type="tns:findAllDiariodetalle"/>
+
+<xs:element name="findAllDiariodetalleResponse" type="tns:findAllDiariodetalleResponse"/>
+
+<xs:element name="findByCuentacontableid" type="tns:findByCuentacontableid"/>
+
+<xs:element name="findByCuentacontableidResponse" type="tns:findByCuentacontableidResponse"/>
+
+<xs:element name="findByDiarioid" type="tns:findByDiarioid"/>
+
+<xs:element name="findByDiarioidResponse" type="tns:findByDiarioidResponse"/>
+
+<xs:element name="findDiariodetalle" type="tns:findDiariodetalle"/>
+
+<xs:element name="findDiariodetalleByFecha" type="tns:findDiariodetalleByFecha"/>
+
+<xs:element name="findDiariodetalleByFechaResponse" type="tns:findDiariodetalleByFechaResponse"/>
+
+<xs:element name="findDiariodetalleResponse" type="tns:findDiariodetalleResponse"/>
+
+<xs:element name="persona" type="tns:persona"/>
+
+<xs:element name="removeDiariodetalle" type="tns:removeDiariodetalle"/>
+
+<xs:element name="removeDiariodetalleResponse" type="tns:removeDiariodetalleResponse"/>
+
+<xs:complexType name="findAllDiariodetalle">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllDiariodetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:diariodetalle" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="diariodetalle">
+<xs:sequence>
+<xs:element name="cuentacontable" type="tns:cuentacontable" minOccurs="0"/>
+<xs:element name="diario" type="tns:diario" minOccurs="0"/>
+<xs:element name="diariodetallePK" type="tns:diariodetallePK" minOccurs="0"/>
+<xs:element name="diariodetalledebe" type="xs:decimal" minOccurs="0"/>
+<xs:element name="diariodetalleestado" type="xs:string" minOccurs="0"/>
+<xs:element name="diariodetallehaber" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cuentacontable">
+<xs:sequence>
+<xs:element name="cuentacontablecodigo" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontabledescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontableestado" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontableid" type="xs:int" minOccurs="0"/>
+<xs:element name="cuentacontablemayor" type="xs:boolean" minOccurs="0"/>
+<xs:element name="cuentacontablenombre" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontablepadre" type="xs:boolean" minOccurs="0"/>
+<xs:element name="cuentacontablepadreid" type="xs:int" minOccurs="0"/>
+<xs:element name="cuentacontablesigno" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empresa">
+<xs:sequence>
+<xs:element name="empresacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresadescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresadiario" type="xs:int" minOccurs="0"/>
+<xs:element name="empresadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaempleado" type="xs:int" minOccurs="0"/>
+<xs:element name="empresaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+<xs:element name="empresanombre" type="xs:string" minOccurs="0"/>
+<xs:element name="empresarut" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatelefono" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatransaccion" type="xs:int" minOccurs="0"/>
+<xs:element name="personaid" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personaapellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="personaciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="personacomuna" type="xs:string" minOccurs="0"/>
+<xs:element name="personacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacorreo" type="xs:string" minOccurs="0"/>
+<xs:element name="personadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="personaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="personafoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="personaid" type="xs:int" minOccurs="0"/>
+<xs:element name="personamovil" type="xs:string" minOccurs="0"/>
+<xs:element name="personanombres" type="xs:string" minOccurs="0"/>
+<xs:element name="personarut" type="xs:string" minOccurs="0"/>
+<xs:element name="personatelefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="diario">
+<xs:sequence>
+<xs:element name="diariodescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="diarioestado" type="xs:string" minOccurs="0"/>
+<xs:element name="diariofecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="diarioid" type="xs:int" minOccurs="0"/>
+<xs:element name="diarioreferencia" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="diariodetallePK">
+<xs:sequence>
+<xs:element name="cuentacontableid" type="xs:int"/>
+<xs:element name="diarioid" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findDiariodetalle">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findDiariodetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:diariodetalle" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDiariodetalle">
+<xs:sequence>
+<xs:element name="entity" type="tns:diariodetalle" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDiariodetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeDiariodetalle">
+<xs:sequence>
+<xs:element name="entity" type="tns:diariodetalle" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeDiariodetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdDiariodetalle">
+<xs:sequence>
+<xs:element name="entity" type="tns:diariodetalle" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdDiariodetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByCuentacontableid">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByCuentacontableidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:diariodetalle" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findDiariodetalleByFecha">
+<xs:sequence>
+<xs:element name="fechaInicial" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="fechaFinal" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findDiariodetalleByFechaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:diariodetalle" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByDiarioid">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByDiarioidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:diariodetalle" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createDiariodetalle">
+<xs:sequence>
+<xs:element name="entity" type="tns:diariodetalle" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createDiariodetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countDiariodetalle">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countDiariodetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

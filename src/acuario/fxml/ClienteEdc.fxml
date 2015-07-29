@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acuario.controller.ClienteEdcController">
+    <stylesheets>
+        <URL value="@../css/Mantenimiento.css" />
+    </stylesheets>
+    <children>
+        <VBox prefHeight="500.0" prefWidth="774.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="100.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="btnPersona" mnemonicParsing="false" onAction="#seleccionPersona" text="Examinar..." GridPane.columnIndex="2" />
+                        <Label text="Persona:" />
+                        <TextField fx:id="clientePersonaid" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" GridPane.columnIndex="1" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                    </VBox.margin>
+                </GridPane>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="480.0" minWidth="10.0" prefWidth="480.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="R.U.T.:" />
+                        <Label text="Apellidos y Nombres:" GridPane.rowIndex="1" />
+                        <Label text="Correo:" GridPane.rowIndex="2" />
+                        <Label text="Teléfono Móvil:" GridPane.rowIndex="3" />
+                        <Label text="Teléfono Fijo:" GridPane.rowIndex="4" />
+                        <Label text="Ciudad:" GridPane.rowIndex="5" />
+                        <Label text="Comuna:" GridPane.rowIndex="6" />                  
+                        <ComboBox fx:id="personaCiudad" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Item 1" />
+                                    <String fx:value="Item 2" />
+                                    <String fx:value="Item 3" />
+                                </FXCollections>   
+                            </items>
+                        </ComboBox>
+                        <ComboBox fx:id="personaComuna" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="personaRUT" editable="false" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextField fx:id="personaNombres" editable="false" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="personaCorreo" editable="false" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="personaMovil" editable="false" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="personaFijo" editable="false" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </GridPane>
+                <GridPane prefHeight="114.0" prefWidth="790.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.0" minWidth="10.0" prefWidth="480.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label text="Direccion:" />
+                        <TextArea fx:id="personaDireccion" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                    </children>
+                </GridPane>
+                <HBox prefHeight="52.0" prefWidth="690.0" spacing="25.0">
+                    <children>
+                        <Button fx:id="btnAceptar" layoutX="421.1875" layoutY="350.5" mnemonicParsing="false" onAction="#btnAcepta" text="Aceptar" />
+                        <Button fx:id="btnCancelar" layoutX="491.1875" layoutY="350.5" mnemonicParsing="false" onAction="#btnCancela" text="Cancelar" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="10.0" top="50.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

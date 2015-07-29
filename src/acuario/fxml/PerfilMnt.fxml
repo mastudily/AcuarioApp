@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acuario.controller.PerfilMntController">
+    <stylesheets>
+        <URL value="@../css/Mantenimiento.css" />
+    </stylesheets>
+    <children>
+        <SplitPane dividerPositions="0.9464882943143813" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <SplitPane dividerPositions="0.10033444816053512" focusTraversable="true" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="798.0">
+                                    <children>
+                                        <HBox layoutX="14.0" layoutY="14.0" spacing="10.0">
+                                            <children>
+                                                <TextField fx:id="perfilBuscar" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="273.0" />
+                                                <Button fx:id="btnBuscar" layoutX="315.0" layoutY="8.0" mnemonicParsing="false" onAction="#buscarPerfil" text="Buscar" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="798.0">
+                                    <children>
+                                        <SplitPane dividerPositions="0.4523809523809524" focusTraversable="true" layoutX="62.0" layoutY="53.0" prefHeight="296.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="400.0">
+                                                    <children>
+                                                        <TableView fx:id="tabla" layoutX="14.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="perfilIdentidadTC" maxWidth="50.0" prefWidth="50.0" text="Id" />
+                                                                <TableColumn fx:id="perfilNombreTC" prefWidth="200.0" text="Nombre" />                                                
+                                                            </columns>
+                                                        </TableView>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                    <children>
+                                                        <VBox prefHeight="500.0" prefWidth="432.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <HBox prefHeight="30.0" prefWidth="200.0">
+                                                                    <children>
+                                                                        <Label styleClass="profileTitle" text="Datos del perfil:" />
+                                                                    </children>
+                                                                    <VBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                    </VBox.margin>
+                                                                </HBox>
+                                                                <GridPane>
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="70.0" />
+                                                                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label text="Perfil Id:" />
+                                                                        <Label text="Nombre:" GridPane.rowIndex="1" />
+                                                                        <Label text="Descripcion:" GridPane.rowIndex="2" />
+                                                                        <TextField fx:id="perfilId" editable="false" prefHeight="25.0" prefWidth="100.0" snapToPixel="false" GridPane.columnIndex="1" />
+                                                                        <TextField fx:id="perfilNombre" editable="false" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="perfilDescripcion" editable="false" prefHeight="25.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />                                                                        
+                                                                    </children>
+                                                                    <padding>
+                                                                        <Insets bottom="10.0" />
+                                                                    </padding>
+                                                                </GridPane>                                                                
+                                                            </children>
+                                                        </VBox>
+                                                        <HBox layoutX="188.1875" layoutY="548.5" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                                            <children>
+                                                                <Button fx:id="btnNuevo" layoutX="188.1875" layoutY="548.5" mnemonicParsing="false" onAction="#nuevoPerfil" text="Nuevo" />
+                                                                <Button fx:id="btnModificar" layoutX="248.1875" layoutY="548.5" mnemonicParsing="false" onAction="#modificarPerfil" text="Modificar" />
+                                                                <Button fx:id="btnEliminar" layoutX="307.1875" layoutY="548.5" mnemonicParsing="false" onAction="#eliminarPerfil" text="Eliminar" />
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <HBox prefHeight="29.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="mensajeInformativo" styleClass="mensaje" text="Mensaje">
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

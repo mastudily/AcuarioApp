@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="constante" type="tns:constante"/>
+
+<xs:element name="countConstante" type="tns:countConstante"/>
+
+<xs:element name="countConstanteResponse" type="tns:countConstanteResponse"/>
+
+<xs:element name="createConstante" type="tns:createConstante"/>
+
+<xs:element name="createConstanteResponse" type="tns:createConstanteResponse"/>
+
+<xs:element name="createIdConstante" type="tns:createIdConstante"/>
+
+<xs:element name="createIdConstanteResponse" type="tns:createIdConstanteResponse"/>
+
+<xs:element name="editConstante" type="tns:editConstante"/>
+
+<xs:element name="editConstanteResponse" type="tns:editConstanteResponse"/>
+
+<xs:element name="findAllConstante" type="tns:findAllConstante"/>
+
+<xs:element name="findAllConstanteResponse" type="tns:findAllConstanteResponse"/>
+
+<xs:element name="findConstante" type="tns:findConstante"/>
+
+<xs:element name="findConstanteByCodigo" type="tns:findConstanteByCodigo"/>
+
+<xs:element name="findConstanteByCodigoMnt" type="tns:findConstanteByCodigoMnt"/>
+
+<xs:element name="findConstanteByCodigoMntResponse" type="tns:findConstanteByCodigoMntResponse"/>
+
+<xs:element name="findConstanteByCodigoResponse" type="tns:findConstanteByCodigoResponse"/>
+
+<xs:element name="findConstanteByCodigoTipo" type="tns:findConstanteByCodigoTipo"/>
+
+<xs:element name="findConstanteByCodigoTipoResponse" type="tns:findConstanteByCodigoTipoResponse"/>
+
+<xs:element name="findConstanteResponse" type="tns:findConstanteResponse"/>
+
+<xs:element name="removeConstante" type="tns:removeConstante"/>
+
+<xs:element name="removeConstanteResponse" type="tns:removeConstanteResponse"/>
+
+<xs:complexType name="findConstanteByCodigoTipo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConstanteByCodigoTipoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:constante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="constante">
+<xs:sequence>
+<xs:element name="constanteabreviatura" type="xs:string" minOccurs="0"/>
+<xs:element name="constantecodigo" type="xs:string" minOccurs="0"/>
+<xs:element name="constantedescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="constanteestado" type="xs:string" minOccurs="0"/>
+<xs:element name="constanteid" type="xs:int" minOccurs="0"/>
+<xs:element name="constantetipo" type="xs:string" minOccurs="0"/>
+<xs:element name="constantevalor" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editConstante">
+<xs:sequence>
+<xs:element name="entity" type="tns:constante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editConstanteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConstanteByCodigo">
+<xs:sequence>
+<xs:element name="constantecodigo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConstanteByCodigoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:constante" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConstante">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConstanteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:constante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createConstante">
+<xs:sequence>
+<xs:element name="entity" type="tns:constante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createConstanteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countConstante">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countConstanteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdConstante">
+<xs:sequence>
+<xs:element name="entity" type="tns:constante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdConstanteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllConstante">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllConstanteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:constante" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConstanteByCodigoMnt">
+<xs:sequence>
+<xs:element name="constantecodigo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConstanteByCodigoMntResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:constante" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeConstante">
+<xs:sequence>
+<xs:element name="entity" type="tns:constante" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeConstanteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

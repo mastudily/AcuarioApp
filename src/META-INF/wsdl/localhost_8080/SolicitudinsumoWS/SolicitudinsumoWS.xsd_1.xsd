@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="countSolicitudinsumo" type="tns:countSolicitudinsumo"/>
+
+<xs:element name="countSolicitudinsumoResponse" type="tns:countSolicitudinsumoResponse"/>
+
+<xs:element name="createIdSolicitudinsumo" type="tns:createIdSolicitudinsumo"/>
+
+<xs:element name="createIdSolicitudinsumoResponse" type="tns:createIdSolicitudinsumoResponse"/>
+
+<xs:element name="createSolicitudinsumo" type="tns:createSolicitudinsumo"/>
+
+<xs:element name="createSolicitudinsumoResponse" type="tns:createSolicitudinsumoResponse"/>
+
+<xs:element name="editSolicitudinsumo" type="tns:editSolicitudinsumo"/>
+
+<xs:element name="editSolicitudinsumoResponse" type="tns:editSolicitudinsumoResponse"/>
+
+<xs:element name="empresa" type="tns:empresa"/>
+
+<xs:element name="findAllSolicitudinsumo" type="tns:findAllSolicitudinsumo"/>
+
+<xs:element name="findAllSolicitudinsumoResponse" type="tns:findAllSolicitudinsumoResponse"/>
+
+<xs:element name="findBySolicitudinsumoid" type="tns:findBySolicitudinsumoid"/>
+
+<xs:element name="findBySolicitudinsumoidResponse" type="tns:findBySolicitudinsumoidResponse"/>
+
+<xs:element name="findSolicitudinsumo" type="tns:findSolicitudinsumo"/>
+
+<xs:element name="findSolicitudinsumoByFecha" type="tns:findSolicitudinsumoByFecha"/>
+
+<xs:element name="findSolicitudinsumoByFechaResponse" type="tns:findSolicitudinsumoByFechaResponse"/>
+
+<xs:element name="findSolicitudinsumoResponse" type="tns:findSolicitudinsumoResponse"/>
+
+<xs:element name="persona" type="tns:persona"/>
+
+<xs:element name="removeSolicitudinsumo" type="tns:removeSolicitudinsumo"/>
+
+<xs:element name="removeSolicitudinsumoResponse" type="tns:removeSolicitudinsumoResponse"/>
+
+<xs:element name="solicitudinsumo" type="tns:solicitudinsumo"/>
+
+<xs:complexType name="createSolicitudinsumo">
+<xs:sequence>
+<xs:element name="entity" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="solicitudinsumo">
+<xs:sequence>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+<xs:element name="solicitudinsumodescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumoestado" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumofecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="solicitudinsumoid" type="xs:int" minOccurs="0"/>
+<xs:element name="solicitudinsumoobservaciones" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumoreferencia" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumotipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empresa">
+<xs:sequence>
+<xs:element name="empresacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresadescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresadiario" type="xs:int" minOccurs="0"/>
+<xs:element name="empresadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaempleado" type="xs:int" minOccurs="0"/>
+<xs:element name="empresaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+<xs:element name="empresanombre" type="xs:string" minOccurs="0"/>
+<xs:element name="empresarut" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatelefono" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatransaccion" type="xs:int" minOccurs="0"/>
+<xs:element name="personaid" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personaapellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="personaciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="personacomuna" type="xs:string" minOccurs="0"/>
+<xs:element name="personacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacorreo" type="xs:string" minOccurs="0"/>
+<xs:element name="personadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="personaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="personafoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="personaid" type="xs:int" minOccurs="0"/>
+<xs:element name="personamovil" type="xs:string" minOccurs="0"/>
+<xs:element name="personanombres" type="xs:string" minOccurs="0"/>
+<xs:element name="personarut" type="xs:string" minOccurs="0"/>
+<xs:element name="personatelefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createSolicitudinsumoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSolicitudinsumo">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSolicitudinsumoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countSolicitudinsumo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countSolicitudinsumoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllSolicitudinsumo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllSolicitudinsumoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:solicitudinsumo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeSolicitudinsumo">
+<xs:sequence>
+<xs:element name="entity" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeSolicitudinsumoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findBySolicitudinsumoid">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findBySolicitudinsumoidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdSolicitudinsumo">
+<xs:sequence>
+<xs:element name="entity" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdSolicitudinsumoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editSolicitudinsumo">
+<xs:sequence>
+<xs:element name="entity" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editSolicitudinsumoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSolicitudinsumoByFecha">
+<xs:sequence>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSolicitudinsumoByFechaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:solicitudinsumo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

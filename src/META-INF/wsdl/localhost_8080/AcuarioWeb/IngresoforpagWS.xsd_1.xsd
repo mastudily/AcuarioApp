@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="cliente" type="tns:cliente"/>
+
+<xs:element name="countIngresoforpag" type="tns:countIngresoforpag"/>
+
+<xs:element name="countIngresoforpagResponse" type="tns:countIngresoforpagResponse"/>
+
+<xs:element name="createIdIngresoforpag" type="tns:createIdIngresoforpag"/>
+
+<xs:element name="createIdIngresoforpagResponse" type="tns:createIdIngresoforpagResponse"/>
+
+<xs:element name="createIngresoforpag" type="tns:createIngresoforpag"/>
+
+<xs:element name="createIngresoforpagResponse" type="tns:createIngresoforpagResponse"/>
+
+<xs:element name="cuentacontable" type="tns:cuentacontable"/>
+
+<xs:element name="editIngresoforpag" type="tns:editIngresoforpag"/>
+
+<xs:element name="editIngresoforpagResponse" type="tns:editIngresoforpagResponse"/>
+
+<xs:element name="empresa" type="tns:empresa"/>
+
+<xs:element name="findAllIngresoforpag" type="tns:findAllIngresoforpag"/>
+
+<xs:element name="findAllIngresoforpagResponse" type="tns:findAllIngresoforpagResponse"/>
+
+<xs:element name="findByIngresoforpagIngresoid" type="tns:findByIngresoforpagIngresoid"/>
+
+<xs:element name="findByIngresoforpagIngresoidResponse" type="tns:findByIngresoforpagIngresoidResponse"/>
+
+<xs:element name="findIngresoforpag" type="tns:findIngresoforpag"/>
+
+<xs:element name="findIngresoforpagResponse" type="tns:findIngresoforpagResponse"/>
+
+<xs:element name="formapago" type="tns:formapago"/>
+
+<xs:element name="ingreso" type="tns:ingreso"/>
+
+<xs:element name="ingresoforpag" type="tns:ingresoforpag"/>
+
+<xs:element name="persona" type="tns:persona"/>
+
+<xs:element name="removeIngresoforpag" type="tns:removeIngresoforpag"/>
+
+<xs:element name="removeIngresoforpagResponse" type="tns:removeIngresoforpagResponse"/>
+
+<xs:element name="solicitudinsumo" type="tns:solicitudinsumo"/>
+
+<xs:complexType name="countIngresoforpag">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countIngresoforpagResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByIngresoforpagIngresoid">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByIngresoforpagIngresoidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ingresoforpag" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresoforpag">
+<xs:sequence>
+<xs:element name="formapago" type="tns:formapago" minOccurs="0"/>
+<xs:element name="ingreso" type="tns:ingreso" minOccurs="0"/>
+<xs:element name="ingresoforpagPK" type="tns:ingresoforpagPK" minOccurs="0"/>
+<xs:element name="ingresoforpagbanemi" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresoforpagestado" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresoforpagreferencia1" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresoforpagreferencia2" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresoforpagreferencia3" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresoforpagvalor" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="formapago">
+<xs:sequence>
+<xs:element name="formapagoconctacble" type="tns:cuentacontable" minOccurs="0"/>
+<xs:element name="formapagoctacble" type="tns:cuentacontable" minOccurs="0"/>
+<xs:element name="formapagodescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="formapagoestado" type="xs:string" minOccurs="0"/>
+<xs:element name="formapagoid" type="xs:int" minOccurs="0"/>
+<xs:element name="formapagonombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cuentacontable">
+<xs:sequence>
+<xs:element name="cuentacontablecodigo" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontabledescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontableestado" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontableid" type="xs:int" minOccurs="0"/>
+<xs:element name="cuentacontablemayor" type="xs:boolean" minOccurs="0"/>
+<xs:element name="cuentacontablenombre" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontablepadre" type="xs:boolean" minOccurs="0"/>
+<xs:element name="cuentacontablepadreid" type="xs:int" minOccurs="0"/>
+<xs:element name="cuentacontablesigno" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empresa">
+<xs:sequence>
+<xs:element name="empresacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresadescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresadiario" type="xs:int" minOccurs="0"/>
+<xs:element name="empresadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaempleado" type="xs:int" minOccurs="0"/>
+<xs:element name="empresaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+<xs:element name="empresanombre" type="xs:string" minOccurs="0"/>
+<xs:element name="empresarut" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatelefono" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatransaccion" type="xs:int" minOccurs="0"/>
+<xs:element name="personaid" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personaapellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="personaciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="personacomuna" type="xs:string" minOccurs="0"/>
+<xs:element name="personacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacorreo" type="xs:string" minOccurs="0"/>
+<xs:element name="personadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="personaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="personafoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="personaid" type="xs:int" minOccurs="0"/>
+<xs:element name="personamovil" type="xs:string" minOccurs="0"/>
+<xs:element name="personanombres" type="xs:string" minOccurs="0"/>
+<xs:element name="personarut" type="xs:string" minOccurs="0"/>
+<xs:element name="personatelefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingreso">
+<xs:sequence>
+<xs:element name="clienteid" type="tns:cliente" minOccurs="0"/>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+<xs:element name="ingresoadicional" type="xs:decimal" minOccurs="0"/>
+<xs:element name="ingresodescuentos" type="xs:decimal" minOccurs="0"/>
+<xs:element name="ingresoestado" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresofactura" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresofecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="ingresohora" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="ingresoid" type="xs:int" minOccurs="0"/>
+<xs:element name="ingresoimpuestos" type="xs:decimal" minOccurs="0"/>
+<xs:element name="ingresoobservaciones" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresosecuencia" type="xs:short" minOccurs="0"/>
+<xs:element name="ingresotipofactura" type="xs:string" minOccurs="0"/>
+<xs:element name="ingresovalor" type="xs:decimal" minOccurs="0"/>
+<xs:element name="solicitudinsumoid" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="clientedeuda" type="xs:decimal" minOccurs="0"/>
+<xs:element name="clienteestado" type="xs:string" minOccurs="0"/>
+<xs:element name="clientefechanacimiento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="clienteid" type="xs:int" minOccurs="0"/>
+<xs:element name="clientepago" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personaid" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="solicitudinsumo">
+<xs:sequence>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+<xs:element name="solicitudinsumodescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumoestado" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumofecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="solicitudinsumoid" type="xs:int" minOccurs="0"/>
+<xs:element name="solicitudinsumoobservaciones" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumoreferencia" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumotipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresoforpagPK">
+<xs:sequence>
+<xs:element name="formapagoid" type="xs:int"/>
+<xs:element name="ingresoid" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllIngresoforpag">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllIngresoforpagResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ingresoforpag" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdIngresoforpag">
+<xs:sequence>
+<xs:element name="entity" type="tns:ingresoforpag" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdIngresoforpagResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeIngresoforpag">
+<xs:sequence>
+<xs:element name="entity" type="tns:ingresoforpag" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeIngresoforpagResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findIngresoforpag">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findIngresoforpagResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ingresoforpag" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIngresoforpag">
+<xs:sequence>
+<xs:element name="entity" type="tns:ingresoforpag" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIngresoforpagResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editIngresoforpag">
+<xs:sequence>
+<xs:element name="entity" type="tns:ingresoforpag" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editIngresoforpagResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

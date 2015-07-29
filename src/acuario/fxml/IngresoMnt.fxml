@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="acuario.controller.IngresoMntController">
+    <stylesheets>
+        <URL value="@../css/Mantenimiento.css" />
+    </stylesheets>
+    <children>
+        <SplitPane dividerPositions="0.10067114093959731, 0.8976510067114094" focusTraversable="true" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="798.0">
+                    <children>
+                        <HBox layoutX="14.0" layoutY="14.0" spacing="10.0" />
+                        <GridPane prefHeight="60.0" prefWidth="759.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="64.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="99.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="252.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="0.0" prefWidth="188.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="152.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <DatePicker fx:id="fechaBuscar" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="3" />
+                                <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscarIngreso" text="Buscar" GridPane.columnIndex="4" />
+                                <TextField fx:id="rutBuscar" GridPane.columnIndex="1" />
+                                <TextField fx:id="nombreBuscar" GridPane.columnIndex="2" />
+                                <TextField fx:id="idBuscar" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="798.0">
+                    <children>
+                        <TableView fx:id="tabla" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <columns>
+                                <TableColumn fx:id="ingresoIdTC" maxWidth="60.0" prefWidth="60.0" text="Numero" />
+                                <TableColumn fx:id="clienteIdentidadTC" maxWidth="100.0" prefWidth="100.0" text="R.U.T." />
+                                <TableColumn fx:id="clienteNombresTC" maxWidth="250.0" prefWidth="250.0" text="Apellidos y Nombres" />
+                                <TableColumn fx:id="ingresoFechaTC" maxWidth="80.0" text="Fecha" />
+                                <TableColumn fx:id="ingresoHoraTC" maxWidth="60.0" prefWidth="60.0" text="Hora" />
+                                <TableColumn fx:id="ingresoValorTC" maxWidth="100.0" prefWidth="100.0" text="Valor" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="160.0">
+                    <children>
+                        <HBox prefHeight="30.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="mensajeInformativo" styleClass="mensaje" text="Mensaje">
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="432.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <children>
+                                <Button fx:id="btnNuevo" layoutX="188.1875" layoutY="548.5" mnemonicParsing="false" onAction="#nuevoIngreso" text="Nuevo" />
+                                <Button fx:id="btnModificar" layoutX="248.1875" layoutY="548.5" mnemonicParsing="false" onAction="#modificarIngreso" text="Modificar" />
+                                <Button fx:id="btnEliminar" layoutX="307.1875" layoutY="548.5" mnemonicParsing="false" onAction="#eliminarIngreso" text="Eliminar" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

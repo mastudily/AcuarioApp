@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="countCuentacontable" type="tns:countCuentacontable"/>
+
+<xs:element name="countCuentacontableResponse" type="tns:countCuentacontableResponse"/>
+
+<xs:element name="createCuentacontable" type="tns:createCuentacontable"/>
+
+<xs:element name="createCuentacontableResponse" type="tns:createCuentacontableResponse"/>
+
+<xs:element name="createIdCuentacontable" type="tns:createIdCuentacontable"/>
+
+<xs:element name="createIdCuentacontableResponse" type="tns:createIdCuentacontableResponse"/>
+
+<xs:element name="cuentacontable" type="tns:cuentacontable"/>
+
+<xs:element name="editCuentacontable" type="tns:editCuentacontable"/>
+
+<xs:element name="editCuentacontableResponse" type="tns:editCuentacontableResponse"/>
+
+<xs:element name="empresa" type="tns:empresa"/>
+
+<xs:element name="findAllCuentacontable" type="tns:findAllCuentacontable"/>
+
+<xs:element name="findAllCuentacontableResponse" type="tns:findAllCuentacontableResponse"/>
+
+<xs:element name="findByCuentacontablecodigo" type="tns:findByCuentacontablecodigo"/>
+
+<xs:element name="findByCuentacontablecodigoResponse" type="tns:findByCuentacontablecodigoResponse"/>
+
+<xs:element name="findByCuentacontablemayor" type="tns:findByCuentacontablemayor"/>
+
+<xs:element name="findByCuentacontablemayorResponse" type="tns:findByCuentacontablemayorResponse"/>
+
+<xs:element name="findCuentacontable" type="tns:findCuentacontable"/>
+
+<xs:element name="findCuentacontableByCodigo" type="tns:findCuentacontableByCodigo"/>
+
+<xs:element name="findCuentacontableByCodigoResponse" type="tns:findCuentacontableByCodigoResponse"/>
+
+<xs:element name="findCuentacontableByNombre" type="tns:findCuentacontableByNombre"/>
+
+<xs:element name="findCuentacontableByNombreResponse" type="tns:findCuentacontableByNombreResponse"/>
+
+<xs:element name="findCuentacontableResponse" type="tns:findCuentacontableResponse"/>
+
+<xs:element name="persona" type="tns:persona"/>
+
+<xs:element name="removeCuentacontable" type="tns:removeCuentacontable"/>
+
+<xs:element name="removeCuentacontableResponse" type="tns:removeCuentacontableResponse"/>
+
+<xs:complexType name="findCuentacontable">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCuentacontableResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cuentacontable" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cuentacontable">
+<xs:sequence>
+<xs:element name="cuentacontablecodigo" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontabledescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontableestado" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontableid" type="xs:int" minOccurs="0"/>
+<xs:element name="cuentacontablemayor" type="xs:boolean" minOccurs="0"/>
+<xs:element name="cuentacontablenombre" type="xs:string" minOccurs="0"/>
+<xs:element name="cuentacontablepadre" type="xs:boolean" minOccurs="0"/>
+<xs:element name="cuentacontablepadreid" type="xs:int" minOccurs="0"/>
+<xs:element name="cuentacontablesigno" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empresa">
+<xs:sequence>
+<xs:element name="empresacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresadescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresadiario" type="xs:int" minOccurs="0"/>
+<xs:element name="empresadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaempleado" type="xs:int" minOccurs="0"/>
+<xs:element name="empresaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+<xs:element name="empresanombre" type="xs:string" minOccurs="0"/>
+<xs:element name="empresarut" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatelefono" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatransaccion" type="xs:int" minOccurs="0"/>
+<xs:element name="personaid" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personaapellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="personaciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="personacomuna" type="xs:string" minOccurs="0"/>
+<xs:element name="personacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacorreo" type="xs:string" minOccurs="0"/>
+<xs:element name="personadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="personaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="personafoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="personaid" type="xs:int" minOccurs="0"/>
+<xs:element name="personamovil" type="xs:string" minOccurs="0"/>
+<xs:element name="personanombres" type="xs:string" minOccurs="0"/>
+<xs:element name="personarut" type="xs:string" minOccurs="0"/>
+<xs:element name="personatelefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createCuentacontable">
+<xs:sequence>
+<xs:element name="entity" type="tns:cuentacontable" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createCuentacontableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByCuentacontablecodigo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByCuentacontablecodigoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cuentacontable" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCuentacontableByNombre">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCuentacontableByNombreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cuentacontable" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCuentacontableByCodigo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCuentacontableByCodigoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cuentacontable" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllCuentacontable">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllCuentacontableResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cuentacontable" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeCuentacontable">
+<xs:sequence>
+<xs:element name="entity" type="tns:cuentacontable" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeCuentacontableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countCuentacontable">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countCuentacontableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdCuentacontable">
+<xs:sequence>
+<xs:element name="entity" type="tns:cuentacontable" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdCuentacontableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByCuentacontablemayor">
+<xs:sequence>
+<xs:element name="mayor" type="xs:boolean"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByCuentacontablemayorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cuentacontable" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editCuentacontable">
+<xs:sequence>
+<xs:element name="entity" type="tns:cuentacontable" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editCuentacontableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

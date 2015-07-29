@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="countPerfil" type="tns:countPerfil"/>
+
+<xs:element name="countPerfilResponse" type="tns:countPerfilResponse"/>
+
+<xs:element name="createIdPerfil" type="tns:createIdPerfil"/>
+
+<xs:element name="createIdPerfilResponse" type="tns:createIdPerfilResponse"/>
+
+<xs:element name="createPerfil" type="tns:createPerfil"/>
+
+<xs:element name="createPerfilResponse" type="tns:createPerfilResponse"/>
+
+<xs:element name="editPerfil" type="tns:editPerfil"/>
+
+<xs:element name="editPerfilResponse" type="tns:editPerfilResponse"/>
+
+<xs:element name="findAllPerfil" type="tns:findAllPerfil"/>
+
+<xs:element name="findAllPerfilResponse" type="tns:findAllPerfilResponse"/>
+
+<xs:element name="findPerfil" type="tns:findPerfil"/>
+
+<xs:element name="findPerfilById" type="tns:findPerfilById"/>
+
+<xs:element name="findPerfilByIdResponse" type="tns:findPerfilByIdResponse"/>
+
+<xs:element name="findPerfilByNombre" type="tns:findPerfilByNombre"/>
+
+<xs:element name="findPerfilByNombreResponse" type="tns:findPerfilByNombreResponse"/>
+
+<xs:element name="findPerfilResponse" type="tns:findPerfilResponse"/>
+
+<xs:element name="perfil" type="tns:perfil"/>
+
+<xs:element name="removePerfil" type="tns:removePerfil"/>
+
+<xs:element name="removePerfilResponse" type="tns:removePerfilResponse"/>
+
+<xs:complexType name="findAllPerfil">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllPerfilResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:perfil" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="perfil">
+<xs:sequence>
+<xs:element name="perfildescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="perfilestado" type="xs:string" minOccurs="0"/>
+<xs:element name="perfilid" type="xs:int" minOccurs="0"/>
+<xs:element name="perfilnombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPerfil">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPerfilResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:perfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePerfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:perfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePerfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPerfilById">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPerfilByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:perfil" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editPerfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:perfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editPerfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdPerfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:perfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdPerfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createPerfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:perfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createPerfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countPerfil">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countPerfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPerfilByNombre">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPerfilByNombreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:perfil" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="cliente" type="tns:cliente"/>
+
+<xs:element name="countCliente" type="tns:countCliente"/>
+
+<xs:element name="countClienteResponse" type="tns:countClienteResponse"/>
+
+<xs:element name="createCliente" type="tns:createCliente"/>
+
+<xs:element name="createClienteResponse" type="tns:createClienteResponse"/>
+
+<xs:element name="createIdCliente" type="tns:createIdCliente"/>
+
+<xs:element name="createIdClienteResponse" type="tns:createIdClienteResponse"/>
+
+<xs:element name="editCliente" type="tns:editCliente"/>
+
+<xs:element name="editClienteResponse" type="tns:editClienteResponse"/>
+
+<xs:element name="findAllCliente" type="tns:findAllCliente"/>
+
+<xs:element name="findAllClienteResponse" type="tns:findAllClienteResponse"/>
+
+<xs:element name="findCliente" type="tns:findCliente"/>
+
+<xs:element name="findClienteByIdentidad" type="tns:findClienteByIdentidad"/>
+
+<xs:element name="findClienteByIdentidadResponse" type="tns:findClienteByIdentidadResponse"/>
+
+<xs:element name="findClienteByNombre" type="tns:findClienteByNombre"/>
+
+<xs:element name="findClienteByNombreResponse" type="tns:findClienteByNombreResponse"/>
+
+<xs:element name="findClienteResponse" type="tns:findClienteResponse"/>
+
+<xs:element name="persona" type="tns:persona"/>
+
+<xs:element name="removeCliente" type="tns:removeCliente"/>
+
+<xs:element name="removeClienteResponse" type="tns:removeClienteResponse"/>
+
+<xs:complexType name="findClienteByNombre">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findClienteByNombreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="clientedeuda" type="xs:decimal" minOccurs="0"/>
+<xs:element name="clienteestado" type="xs:string" minOccurs="0"/>
+<xs:element name="clientefechanacimiento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="clienteid" type="xs:int" minOccurs="0"/>
+<xs:element name="clientepago" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personaid" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personaapellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="personaciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="personacomuna" type="xs:string" minOccurs="0"/>
+<xs:element name="personacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacorreo" type="xs:string" minOccurs="0"/>
+<xs:element name="personadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="personaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="personafoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="personaid" type="xs:int" minOccurs="0"/>
+<xs:element name="personamovil" type="xs:string" minOccurs="0"/>
+<xs:element name="personanombres" type="xs:string" minOccurs="0"/>
+<xs:element name="personarut" type="xs:string" minOccurs="0"/>
+<xs:element name="personatelefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findClienteByIdentidad">
+<xs:sequence>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findClienteByIdentidadResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdCliente">
+<xs:sequence>
+<xs:element name="entity" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCliente">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllCliente">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createCliente">
+<xs:sequence>
+<xs:element name="entity" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countCliente">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeCliente">
+<xs:sequence>
+<xs:element name="entity" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editCliente">
+<xs:sequence>
+<xs:element name="entity" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="countProgramaperfil" type="tns:countProgramaperfil"/>
+
+<xs:element name="countProgramaperfilResponse" type="tns:countProgramaperfilResponse"/>
+
+<xs:element name="createIdProgramaperfil" type="tns:createIdProgramaperfil"/>
+
+<xs:element name="createIdProgramaperfilResponse" type="tns:createIdProgramaperfilResponse"/>
+
+<xs:element name="createProgramaperfil" type="tns:createProgramaperfil"/>
+
+<xs:element name="createProgramaperfilResponse" type="tns:createProgramaperfilResponse"/>
+
+<xs:element name="editProgramaperfil" type="tns:editProgramaperfil"/>
+
+<xs:element name="editProgramaperfilResponse" type="tns:editProgramaperfilResponse"/>
+
+<xs:element name="findAllProgramaperfil" type="tns:findAllProgramaperfil"/>
+
+<xs:element name="findAllProgramaperfilResponse" type="tns:findAllProgramaperfilResponse"/>
+
+<xs:element name="findProgramaperfil" type="tns:findProgramaperfil"/>
+
+<xs:element name="findProgramaperfilResponse" type="tns:findProgramaperfilResponse"/>
+
+<xs:element name="listaProgramas" type="tns:listaProgramas"/>
+
+<xs:element name="listaProgramasResponse" type="tns:listaProgramasResponse"/>
+
+<xs:element name="perfil" type="tns:perfil"/>
+
+<xs:element name="programa" type="tns:programa"/>
+
+<xs:element name="programaperfil" type="tns:programaperfil"/>
+
+<xs:element name="removeProgramaperfil" type="tns:removeProgramaperfil"/>
+
+<xs:element name="removeProgramaperfilResponse" type="tns:removeProgramaperfilResponse"/>
+
+<xs:complexType name="findProgramaperfil">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaperfilResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programaperfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="programaperfil">
+<xs:sequence>
+<xs:element name="perfil" type="tns:perfil" minOccurs="0"/>
+<xs:element name="programa" type="tns:programa" minOccurs="0"/>
+<xs:element name="programaperfilPK" type="tns:programaperfilPK" minOccurs="0"/>
+<xs:element name="programaperfilestado" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="perfil">
+<xs:sequence>
+<xs:element name="perfildescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="perfilestado" type="xs:string" minOccurs="0"/>
+<xs:element name="perfilid" type="xs:int" minOccurs="0"/>
+<xs:element name="perfilnombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="programa">
+<xs:sequence>
+<xs:element name="programaabreviatura" type="xs:string" minOccurs="0"/>
+<xs:element name="programadescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="programaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="programaid" type="xs:int" minOccurs="0"/>
+<xs:element name="programanivel" type="xs:short"/>
+<xs:element name="programanombre" type="xs:string" minOccurs="0"/>
+<xs:element name="programaorden" type="xs:short"/>
+<xs:element name="programapadreid" type="xs:int"/>
+<xs:element name="programatipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="programaperfilPK">
+<xs:sequence>
+<xs:element name="perfilid" type="xs:int"/>
+<xs:element name="programaid" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllProgramaperfil">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllProgramaperfilResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programaperfil" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaProgramas">
+<xs:sequence>
+<xs:element name="perfilid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaProgramasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programaperfil" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createProgramaperfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:programaperfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createProgramaperfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editProgramaperfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:programaperfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editProgramaperfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeProgramaperfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:programaperfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeProgramaperfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countProgramaperfil">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countProgramaperfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdProgramaperfil">
+<xs:sequence>
+<xs:element name="entity" type="tns:programaperfil" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdProgramaperfilResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
