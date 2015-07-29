@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="countPersona" type="tns:countPersona"/>
+
+<xs:element name="countPersonaResponse" type="tns:countPersonaResponse"/>
+
+<xs:element name="createIdPersona" type="tns:createIdPersona"/>
+
+<xs:element name="createIdPersonaResponse" type="tns:createIdPersonaResponse"/>
+
+<xs:element name="createPersona" type="tns:createPersona"/>
+
+<xs:element name="createPersonaResponse" type="tns:createPersonaResponse"/>
+
+<xs:element name="editPersona" type="tns:editPersona"/>
+
+<xs:element name="editPersonaResponse" type="tns:editPersonaResponse"/>
+
+<xs:element name="findAllPersona" type="tns:findAllPersona"/>
+
+<xs:element name="findAllPersonaResponse" type="tns:findAllPersonaResponse"/>
+
+<xs:element name="findPersona" type="tns:findPersona"/>
+
+<xs:element name="findPersonaByIdentidad" type="tns:findPersonaByIdentidad"/>
+
+<xs:element name="findPersonaByIdentidadResponse" type="tns:findPersonaByIdentidadResponse"/>
+
+<xs:element name="findPersonaByNombre" type="tns:findPersonaByNombre"/>
+
+<xs:element name="findPersonaByNombreResponse" type="tns:findPersonaByNombreResponse"/>
+
+<xs:element name="findPersonaResponse" type="tns:findPersonaResponse"/>
+
+<xs:element name="persona" type="tns:persona"/>
+
+<xs:element name="removePersona" type="tns:removePersona"/>
+
+<xs:element name="removePersonaResponse" type="tns:removePersonaResponse"/>
+
+<xs:complexType name="countPersona">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countPersonaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePersona">
+<xs:sequence>
+<xs:element name="entity" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personaapellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="personaciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="personacomuna" type="xs:string" minOccurs="0"/>
+<xs:element name="personacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacorreo" type="xs:string" minOccurs="0"/>
+<xs:element name="personadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="personaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="personafoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="personaid" type="xs:int" minOccurs="0"/>
+<xs:element name="personamovil" type="xs:string" minOccurs="0"/>
+<xs:element name="personanombres" type="xs:string" minOccurs="0"/>
+<xs:element name="personarut" type="xs:string" minOccurs="0"/>
+<xs:element name="personatelefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePersonaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPersonaByIdentidad">
+<xs:sequence>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPersonaByIdentidadResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdPersona">
+<xs:sequence>
+<xs:element name="entity" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdPersonaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editPersona">
+<xs:sequence>
+<xs:element name="entity" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editPersonaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPersonaByNombre">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPersonaByNombreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllPersona">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllPersonaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createPersona">
+<xs:sequence>
+<xs:element name="entity" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createPersonaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPersona">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPersonaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

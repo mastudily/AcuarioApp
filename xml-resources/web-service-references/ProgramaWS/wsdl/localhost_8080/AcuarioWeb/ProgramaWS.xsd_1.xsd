@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="ProgramaPorPadreid" type="tns:ProgramaPorPadreid"/>
+
+<xs:element name="ProgramaPorPadreidResponse" type="tns:ProgramaPorPadreidResponse"/>
+
+<xs:element name="ProgramaPorTipo" type="tns:ProgramaPorTipo"/>
+
+<xs:element name="ProgramaPorTipoResponse" type="tns:ProgramaPorTipoResponse"/>
+
+<xs:element name="countPrograma" type="tns:countPrograma"/>
+
+<xs:element name="countProgramaResponse" type="tns:countProgramaResponse"/>
+
+<xs:element name="createIdPrograma" type="tns:createIdPrograma"/>
+
+<xs:element name="createIdProgramaResponse" type="tns:createIdProgramaResponse"/>
+
+<xs:element name="createPrograma" type="tns:createPrograma"/>
+
+<xs:element name="createProgramaResponse" type="tns:createProgramaResponse"/>
+
+<xs:element name="editPrograma" type="tns:editPrograma"/>
+
+<xs:element name="editProgramaResponse" type="tns:editProgramaResponse"/>
+
+<xs:element name="findAllPrograma" type="tns:findAllPrograma"/>
+
+<xs:element name="findAllProgramaResponse" type="tns:findAllProgramaResponse"/>
+
+<xs:element name="findPrograma" type="tns:findPrograma"/>
+
+<xs:element name="findProgramaById" type="tns:findProgramaById"/>
+
+<xs:element name="findProgramaByIdResponse" type="tns:findProgramaByIdResponse"/>
+
+<xs:element name="findProgramaByNombre" type="tns:findProgramaByNombre"/>
+
+<xs:element name="findProgramaByNombreResponse" type="tns:findProgramaByNombreResponse"/>
+
+<xs:element name="findProgramaByTipo" type="tns:findProgramaByTipo"/>
+
+<xs:element name="findProgramaByTipoResponse" type="tns:findProgramaByTipoResponse"/>
+
+<xs:element name="findProgramaResponse" type="tns:findProgramaResponse"/>
+
+<xs:element name="listaProgramasTipo" type="tns:listaProgramasTipo"/>
+
+<xs:element name="listaProgramasTipoResponse" type="tns:listaProgramasTipoResponse"/>
+
+<xs:element name="programa" type="tns:programa"/>
+
+<xs:element name="removePrograma" type="tns:removePrograma"/>
+
+<xs:element name="removeProgramaResponse" type="tns:removeProgramaResponse"/>
+
+<xs:complexType name="editPrograma">
+<xs:sequence>
+<xs:element name="entity" type="tns:programa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="programa">
+<xs:sequence>
+<xs:element name="programaabreviatura" type="xs:string" minOccurs="0"/>
+<xs:element name="programadescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="programaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="programaid" type="xs:int" minOccurs="0"/>
+<xs:element name="programanivel" type="xs:short"/>
+<xs:element name="programanombre" type="xs:string" minOccurs="0"/>
+<xs:element name="programaorden" type="xs:short"/>
+<xs:element name="programapadreid" type="xs:int"/>
+<xs:element name="programatipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editProgramaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countPrograma">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countProgramaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPrograma">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllPrograma">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllProgramaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaByTipo">
+<xs:sequence>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaByTipoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdPrograma">
+<xs:sequence>
+<xs:element name="entity" type="tns:programa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdProgramaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaProgramasTipo">
+<xs:sequence>
+<xs:element name="perfilid" type="xs:int" minOccurs="0"/>
+<xs:element name="programatipo" type="xs:string" minOccurs="0"/>
+<xs:element name="programapadreid" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaProgramasTipoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePrograma">
+<xs:sequence>
+<xs:element name="entity" type="tns:programa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeProgramaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createPrograma">
+<xs:sequence>
+<xs:element name="entity" type="tns:programa" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createProgramaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaByNombre">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaByNombreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaById">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findProgramaByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ProgramaPorTipo">
+<xs:sequence>
+<xs:element name="programatipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ProgramaPorTipoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ProgramaPorPadreid">
+<xs:sequence>
+<xs:element name="programapadreid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ProgramaPorPadreidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:programa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="auditoria" type="tns:auditoria"/>
+
+<xs:element name="countAuditoria" type="tns:countAuditoria"/>
+
+<xs:element name="countAuditoriaResponse" type="tns:countAuditoriaResponse"/>
+
+<xs:element name="createAuditoria" type="tns:createAuditoria"/>
+
+<xs:element name="createAuditoriaResponse" type="tns:createAuditoriaResponse"/>
+
+<xs:element name="createIdAuditoria" type="tns:createIdAuditoria"/>
+
+<xs:element name="createIdAuditoriaResponse" type="tns:createIdAuditoriaResponse"/>
+
+<xs:element name="editAuditoria" type="tns:editAuditoria"/>
+
+<xs:element name="editAuditoriaResponse" type="tns:editAuditoriaResponse"/>
+
+<xs:element name="findAllAuditoria" type="tns:findAllAuditoria"/>
+
+<xs:element name="findAllAuditoriaResponse" type="tns:findAllAuditoriaResponse"/>
+
+<xs:element name="findAuditoria" type="tns:findAuditoria"/>
+
+<xs:element name="findAuditoriaResponse" type="tns:findAuditoriaResponse"/>
+
+<xs:element name="removeAuditoria" type="tns:removeAuditoria"/>
+
+<xs:element name="removeAuditoriaResponse" type="tns:removeAuditoriaResponse"/>
+
+<xs:complexType name="createIdAuditoria">
+<xs:sequence>
+<xs:element name="entity" type="tns:auditoria" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="auditoria">
+<xs:sequence>
+<xs:element name="auditoriaestacion" type="xs:string" minOccurs="0"/>
+<xs:element name="auditoriaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="auditoriafecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="auditoriaid" type="xs:int" minOccurs="0"/>
+<xs:element name="auditoriaprograma" type="xs:string" minOccurs="0"/>
+<xs:element name="auditoriaregistroid" type="xs:int"/>
+<xs:element name="auditoriatabla" type="xs:string" minOccurs="0"/>
+<xs:element name="auditoriatransaccion" type="xs:string" minOccurs="0"/>
+<xs:element name="auditoriausuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdAuditoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeAuditoria">
+<xs:sequence>
+<xs:element name="entity" type="tns:auditoria" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeAuditoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuditoria">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuditoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:auditoria" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createAuditoria">
+<xs:sequence>
+<xs:element name="entity" type="tns:auditoria" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createAuditoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editAuditoria">
+<xs:sequence>
+<xs:element name="entity" type="tns:auditoria" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editAuditoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countAuditoria">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countAuditoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllAuditoria">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllAuditoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:auditoria" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

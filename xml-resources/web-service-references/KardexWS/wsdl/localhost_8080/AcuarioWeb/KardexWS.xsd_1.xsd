@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.acuario/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.acuario/">
+
+<xs:element name="countKardex" type="tns:countKardex"/>
+
+<xs:element name="countKardexResponse" type="tns:countKardexResponse"/>
+
+<xs:element name="createIdKardex" type="tns:createIdKardex"/>
+
+<xs:element name="createIdKardexResponse" type="tns:createIdKardexResponse"/>
+
+<xs:element name="createKardex" type="tns:createKardex"/>
+
+<xs:element name="createKardexResponse" type="tns:createKardexResponse"/>
+
+<xs:element name="editKardex" type="tns:editKardex"/>
+
+<xs:element name="editKardexResponse" type="tns:editKardexResponse"/>
+
+<xs:element name="empresa" type="tns:empresa"/>
+
+<xs:element name="findAllKardex" type="tns:findAllKardex"/>
+
+<xs:element name="findAllKardexResponse" type="tns:findAllKardexResponse"/>
+
+<xs:element name="findByInsumoidPeriodo" type="tns:findByInsumoidPeriodo"/>
+
+<xs:element name="findByInsumoidPeriodoResponse" type="tns:findByInsumoidPeriodoResponse"/>
+
+<xs:element name="findBySolicitudinsumoid" type="tns:findBySolicitudinsumoid"/>
+
+<xs:element name="findBySolicitudinsumoidResponse" type="tns:findBySolicitudinsumoidResponse"/>
+
+<xs:element name="findKardex" type="tns:findKardex"/>
+
+<xs:element name="findKardexResponse" type="tns:findKardexResponse"/>
+
+<xs:element name="insumo" type="tns:insumo"/>
+
+<xs:element name="insumoempresa" type="tns:insumoempresa"/>
+
+<xs:element name="kardex" type="tns:kardex"/>
+
+<xs:element name="persona" type="tns:persona"/>
+
+<xs:element name="removeKardex" type="tns:removeKardex"/>
+
+<xs:element name="removeKardexResponse" type="tns:removeKardexResponse"/>
+
+<xs:element name="solicitudinsumo" type="tns:solicitudinsumo"/>
+
+<xs:complexType name="removeKardex">
+<xs:sequence>
+<xs:element name="entity" type="tns:kardex" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kardex">
+<xs:sequence>
+<xs:element name="insumoempresa" type="tns:insumoempresa" minOccurs="0"/>
+<xs:element name="kardexPK" type="tns:kardexPK" minOccurs="0"/>
+<xs:element name="kardexcantidad" type="xs:decimal" minOccurs="0"/>
+<xs:element name="kardexestado" type="xs:string" minOccurs="0"/>
+<xs:element name="kardexfecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="kardexprecio" type="xs:decimal" minOccurs="0"/>
+<xs:element name="kardexsigno" type="xs:string" minOccurs="0"/>
+<xs:element name="kardextipo" type="xs:string" minOccurs="0"/>
+<xs:element name="kardexultimacantidad" type="xs:decimal" minOccurs="0"/>
+<xs:element name="kardexusado" type="xs:decimal" minOccurs="0"/>
+<xs:element name="solicitudinsumo" type="tns:solicitudinsumo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insumoempresa">
+<xs:sequence>
+<xs:element name="empresa" type="tns:empresa" minOccurs="0"/>
+<xs:element name="insumo" type="tns:insumo" minOccurs="0"/>
+<xs:element name="insumoempresaPK" type="tns:insumoempresaPK" minOccurs="0"/>
+<xs:element name="insumoempresacompra" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="insumoempresaegresos" type="xs:decimal" minOccurs="0"/>
+<xs:element name="insumoempresaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="insumoempresaingresos" type="xs:decimal" minOccurs="0"/>
+<xs:element name="insumoempresareservado" type="xs:decimal" minOccurs="0"/>
+<xs:element name="insumoempresasecuencia" type="xs:short" minOccurs="0"/>
+<xs:element name="insumoempresastockactual" type="xs:decimal" minOccurs="0"/>
+<xs:element name="insumoempresastockinicial" type="xs:decimal" minOccurs="0"/>
+<xs:element name="insumoempresastockmaximo" type="xs:decimal" minOccurs="0"/>
+<xs:element name="insumoempresastockminimo" type="xs:decimal" minOccurs="0"/>
+<xs:element name="insumoempresavigencia" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empresa">
+<xs:sequence>
+<xs:element name="empresacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="empresadescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresadiario" type="xs:int" minOccurs="0"/>
+<xs:element name="empresadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaempleado" type="xs:int" minOccurs="0"/>
+<xs:element name="empresaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaid" type="xs:int" minOccurs="0"/>
+<xs:element name="empresanombre" type="xs:string" minOccurs="0"/>
+<xs:element name="empresarut" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatelefono" type="xs:string" minOccurs="0"/>
+<xs:element name="empresatransaccion" type="xs:int" minOccurs="0"/>
+<xs:element name="personaid" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personaapellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="personaciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="personacomuna" type="xs:string" minOccurs="0"/>
+<xs:element name="personacoordlat" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacoordlon" type="xs:decimal" minOccurs="0"/>
+<xs:element name="personacorreo" type="xs:string" minOccurs="0"/>
+<xs:element name="personadireccion" type="xs:string" minOccurs="0"/>
+<xs:element name="personaestado" type="xs:string" minOccurs="0"/>
+<xs:element name="personafoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="personaid" type="xs:int" minOccurs="0"/>
+<xs:element name="personamovil" type="xs:string" minOccurs="0"/>
+<xs:element name="personanombres" type="xs:string" minOccurs="0"/>
+<xs:element name="personarut" type="xs:string" minOccurs="0"/>
+<xs:element name="personatelefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insumo">
+<xs:sequence>
+<xs:element name="insumocodigo" type="xs:string" minOccurs="0"/>
+<xs:element name="insumodescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="insumoestado" type="xs:string" minOccurs="0"/>
+<xs:element name="insumofoto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="insumoid" type="xs:int" minOccurs="0"/>
+<xs:element name="insumonombre" type="xs:string" minOccurs="0"/>
+<xs:element name="insumopresentacion" type="xs:string" minOccurs="0"/>
+<xs:element name="insumotipo" type="xs:string" minOccurs="0"/>
+<xs:element name="insumounmed" type="xs:string" minOccurs="0"/>
+<xs:element name="insumovalor" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insumoempresaPK">
+<xs:sequence>
+<xs:element name="empresaid" type="xs:int"/>
+<xs:element name="insumoid" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kardexPK">
+<xs:sequence>
+<xs:element name="empresaid" type="xs:int"/>
+<xs:element name="insumoid" type="xs:int"/>
+<xs:element name="solicitudinsumoid" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="solicitudinsumo">
+<xs:sequence>
+<xs:element name="empresaid" type="tns:empresa" minOccurs="0"/>
+<xs:element name="solicitudinsumodescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumoestado" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumofecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="solicitudinsumoid" type="xs:int" minOccurs="0"/>
+<xs:element name="solicitudinsumoobservaciones" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumoreferencia" type="xs:string" minOccurs="0"/>
+<xs:element name="solicitudinsumotipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeKardexResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createKardex">
+<xs:sequence>
+<xs:element name="entity" type="tns:kardex" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createKardexResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findBySolicitudinsumoid">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findBySolicitudinsumoidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kardex" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countKardex">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countKardexResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByInsumoidPeriodo">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="fecini" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="fecfin" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByInsumoidPeriodoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kardex" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findKardex">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findKardexResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kardex" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editKardex">
+<xs:sequence>
+<xs:element name="entity" type="tns:kardex" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editKardexResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllKardex">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllKardexResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kardex" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdKardex">
+<xs:sequence>
+<xs:element name="entity" type="tns:kardex" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createIdKardexResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

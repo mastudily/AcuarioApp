@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-AuditoriaWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/AuditoriaWS"/>
+        <property name="wsdl-AuditoriaWS" location="xml-resources/web-service-references/AuditoriaWS/wsdl/localhost_8080/AcuarioWeb/AuditoriaWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AuditoriaWS" destdir="${build.generated.dir}/jax-wsCache/AuditoriaWS" wsdl="${wsdl-AuditoriaWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/AuditoriaWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-AuditoriaWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/AuditoriaWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/AuditoriaWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-AuditoriaWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/AuditoriaWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-ClienteWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ClienteWS"/>
+        <property name="wsdl-ClienteWS" location="xml-resources/web-service-references/ClienteWS/wsdl/localhost_8080/AcuarioWeb/ClienteWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ClienteWS" destdir="${build.generated.dir}/jax-wsCache/ClienteWS" wsdl="${wsdl-ClienteWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/ClienteWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ClienteWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ClienteWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ClienteWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ClienteWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ClienteWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-ConstanteWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ConstanteWS"/>
+        <property name="wsdl-ConstanteWS" location="xml-resources/web-service-references/ConstanteWS/wsdl/localhost_8080/AcuarioWeb/ConstanteWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ConstanteWS" destdir="${build.generated.dir}/jax-wsCache/ConstanteWS" wsdl="${wsdl-ConstanteWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/ConstanteWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ConstanteWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ConstanteWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ConstanteWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ConstanteWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ConstanteWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-EmpresaWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EmpresaWS"/>
+        <property name="wsdl-EmpresaWS" location="xml-resources/web-service-references/EmpresaWS/wsdl/localhost_8080/AcuarioWeb/EmpresaWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EmpresaWS" destdir="${build.generated.dir}/jax-wsCache/EmpresaWS" wsdl="${wsdl-EmpresaWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/EmpresaWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-EmpresaWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EmpresaWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EmpresaWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EmpresaWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EmpresaWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-InsumoWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/InsumoWS"/>
+        <property name="wsdl-InsumoWS" location="xml-resources/web-service-references/InsumoWS/wsdl/localhost_8080/AcuarioWeb/InsumoWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/InsumoWS" destdir="${build.generated.dir}/jax-wsCache/InsumoWS" wsdl="${wsdl-InsumoWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/InsumoWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-InsumoWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/InsumoWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/InsumoWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-InsumoWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/InsumoWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-InsumoempresaWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/InsumoempresaWS"/>
+        <property name="wsdl-InsumoempresaWS" location="xml-resources/web-service-references/InsumoempresaWS/wsdl/localhost_8080/AcuarioWeb/InsumoempresaWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/InsumoempresaWS" destdir="${build.generated.dir}/jax-wsCache/InsumoempresaWS" wsdl="${wsdl-InsumoempresaWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/InsumoempresaWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-InsumoempresaWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/InsumoempresaWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/InsumoempresaWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-InsumoempresaWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/InsumoempresaWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-PerfilWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/PerfilWS"/>
+        <property name="wsdl-PerfilWS" location="xml-resources/web-service-references/PerfilWS/wsdl/localhost_8080/AcuarioWeb/PerfilWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PerfilWS" destdir="${build.generated.dir}/jax-wsCache/PerfilWS" wsdl="${wsdl-PerfilWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/PerfilWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-PerfilWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/PerfilWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/PerfilWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-PerfilWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/PerfilWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-PersonaWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/PersonaWS"/>
+        <property name="wsdl-PersonaWS" location="xml-resources/web-service-references/PersonaWS/wsdl/localhost_8080/AcuarioWeb/PersonaWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonaWS" destdir="${build.generated.dir}/jax-wsCache/PersonaWS" wsdl="${wsdl-PersonaWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/PersonaWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-PersonaWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/PersonaWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/PersonaWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-PersonaWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/PersonaWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-ProgramaperfilWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ProgramaperfilWS"/>
+        <property name="wsdl-ProgramaperfilWS" location="xml-resources/web-service-references/ProgramaperfilWS/wsdl/localhost_8080/AcuarioWeb/ProgramaperfilWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProgramaperfilWS" destdir="${build.generated.dir}/jax-wsCache/ProgramaperfilWS" wsdl="${wsdl-ProgramaperfilWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/ProgramaperfilWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ProgramaperfilWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ProgramaperfilWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProgramaperfilWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ProgramaperfilWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ProgramaperfilWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-UsuarioWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        <property name="wsdl-UsuarioWS" location="xml-resources/web-service-references/UsuarioWS/wsdl/localhost_8080/AcuarioWeb/UsuarioWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsuarioWS" destdir="${build.generated.dir}/jax-wsCache/UsuarioWS" wsdl="${wsdl-UsuarioWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/UsuarioWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-UsuarioWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsuarioWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsuarioWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-KardexWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/KardexWS"/>
+        <property name="wsdl-KardexWS" location="xml-resources/web-service-references/KardexWS/wsdl/localhost_8080/AcuarioWeb/KardexWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/KardexWS" destdir="${build.generated.dir}/jax-wsCache/KardexWS" wsdl="${wsdl-KardexWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/KardexWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-KardexWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/KardexWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/KardexWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-KardexWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/KardexWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-ProgramaWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ProgramaWS"/>
+        <property name="wsdl-ProgramaWS" location="xml-resources/web-service-references/ProgramaWS/wsdl/localhost_8080/AcuarioWeb/ProgramaWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProgramaWS" destdir="${build.generated.dir}/jax-wsCache/ProgramaWS" wsdl="${wsdl-ProgramaWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/ProgramaWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ProgramaWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ProgramaWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProgramaWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ProgramaWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ProgramaWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-SolicitudinsumoWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/SolicitudinsumoWS"/>
+        <property name="wsdl-SolicitudinsumoWS" location="xml-resources/web-service-references/SolicitudinsumoWS/wsdl/localhost_8080/AcuarioWeb/SolicitudinsumoWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SolicitudinsumoWS" destdir="${build.generated.dir}/jax-wsCache/SolicitudinsumoWS" wsdl="${wsdl-SolicitudinsumoWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/SolicitudinsumoWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-SolicitudinsumoWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/SolicitudinsumoWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/SolicitudinsumoWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-SolicitudinsumoWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/SolicitudinsumoWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-FormapagoWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/FormapagoWS"/>
+        <property name="wsdl-FormapagoWS" location="xml-resources/web-service-references/FormapagoWS/wsdl/localhost_8080/AcuarioWeb/FormapagoWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/FormapagoWS" destdir="${build.generated.dir}/jax-wsCache/FormapagoWS" wsdl="${wsdl-FormapagoWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/FormapagoWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-FormapagoWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/FormapagoWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/FormapagoWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-FormapagoWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/FormapagoWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-DiarioWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DiarioWS"/>
+        <property name="wsdl-DiarioWS" location="xml-resources/web-service-references/DiarioWS/wsdl/localhost_8080/AcuarioWeb/DiarioWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DiarioWS" destdir="${build.generated.dir}/jax-wsCache/DiarioWS" wsdl="${wsdl-DiarioWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/DiarioWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-DiarioWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DiarioWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DiarioWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-DiarioWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/DiarioWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-DiariodetalleWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DiariodetalleWS"/>
+        <property name="wsdl-DiariodetalleWS" location="xml-resources/web-service-references/DiariodetalleWS/wsdl/localhost_8080/AcuarioWeb/DiariodetalleWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DiariodetalleWS" destdir="${build.generated.dir}/jax-wsCache/DiariodetalleWS" wsdl="${wsdl-DiariodetalleWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/DiariodetalleWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-DiariodetalleWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DiariodetalleWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DiariodetalleWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-DiariodetalleWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/DiariodetalleWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-IngresoWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/IngresoWS"/>
+        <property name="wsdl-IngresoWS" location="xml-resources/web-service-references/IngresoWS/wsdl/localhost_8080/AcuarioWeb/IngresoWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/IngresoWS" destdir="${build.generated.dir}/jax-wsCache/IngresoWS" wsdl="${wsdl-IngresoWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/IngresoWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-IngresoWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/IngresoWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/IngresoWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-IngresoWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/IngresoWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-IngresoforpagWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/IngresoforpagWS"/>
+        <property name="wsdl-IngresoforpagWS" location="xml-resources/web-service-references/IngresoforpagWS/wsdl/localhost_8080/AcuarioWeb/IngresoforpagWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/IngresoforpagWS" destdir="${build.generated.dir}/jax-wsCache/IngresoforpagWS" wsdl="${wsdl-IngresoforpagWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/IngresoforpagWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-IngresoforpagWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/IngresoforpagWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/IngresoforpagWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-IngresoforpagWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/IngresoforpagWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-CuentacontableWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CuentacontableWS"/>
+        <property name="wsdl-CuentacontableWS" location="xml-resources/web-service-references/CuentacontableWS/wsdl/localhost_8080/AcuarioWeb/CuentacontableWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CuentacontableWS" destdir="${build.generated.dir}/jax-wsCache/CuentacontableWS" wsdl="${wsdl-CuentacontableWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AcuarioWeb/CuentacontableWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-CuentacontableWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CuentacontableWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CuentacontableWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CuentacontableWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/CuentacontableWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/acuario/services"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-AuditoriaWS, wsimport-client-ClienteWS, wsimport-client-ConstanteWS, wsimport-client-EmpresaWS, wsimport-client-InsumoWS, wsimport-client-InsumoempresaWS, wsimport-client-PerfilWS, wsimport-client-PersonaWS, wsimport-client-ProgramaperfilWS, wsimport-client-UsuarioWS, wsimport-client-KardexWS, wsimport-client-ProgramaWS, wsimport-client-SolicitudinsumoWS, wsimport-client-FormapagoWS, wsimport-client-DiarioWS, wsimport-client-DiariodetalleWS, wsimport-client-IngresoWS, wsimport-client-IngresoforpagWS, wsimport-client-CuentacontableWS"/>
+</project>
